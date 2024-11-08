@@ -1,0 +1,12 @@
+{% extends 'bootstrap.html' %}
+
+{% block content %}
+    <h2 style="padding: 10px; margin: 0 auto; width: fit-content;">Our Departments</h2>
+    {%for i in dep%}
+        <div style="background-color: lightblue; color: rgb(0, 0, 0); width: 50%; height: fit-content; padding:20px; margin: 0 auto; border-radius: 20px;">
+            <h3 style="text-align: center;">{{i.dep_name}}</h3>
+            <p style="text-align: center;">{{i.dep_description}}</p>
+        </div><br>
+        
+    {%endfor%}
+{% endblock %}

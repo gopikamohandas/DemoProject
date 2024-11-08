@@ -1,0 +1,10 @@
+li:hover{
+   background-color: deeppink;
+   border-radius: 10px;
+}
+h1 .boot{
+   color: aqua;
+}
+li .logout{
+   border: none;
+}

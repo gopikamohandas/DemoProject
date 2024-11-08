@@ -1,0 +1,9 @@
+{% extends 'bootstrap.html' %}
+{% block content %}
+    {% for i in dept %}
+    <div class="depart" style="background-color: pink; padding: 20px;">
+        <h3 style="color: black;">{{ i.dep_name }}</h3>
+        <p>{{ i.dep_description }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

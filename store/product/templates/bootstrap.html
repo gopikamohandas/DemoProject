@@ -1,0 +1,72 @@
+{%  load static %}
+  <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <style>
+    .logout{
+      border: none; 
+      background: transparent; 
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg p-3 mb-2" style="border: 1px solid lightskyblue;">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left: 100px; ">
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" aria-current="page" href="{% url 'home' %}"><b>HOME</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'aboutnav' %}"><b>ABOUT</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'contactnav' %}"><b>CONTACT</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'booking1' %}"><b>BOOKING</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'dept' %}"><b>DEPARTMENT</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'doc' %}"><b>DOCTORS</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'deptlist' %}"><b>CVB LIST</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'depdetail' 1  %}"><b>CVB DETAIL</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'depypdate' 1 %}"><b>CVB UPDATE</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'deptcreate' %}"><b>CVB CREATE</b></a>
+              </li>
+              <li class="nav-item" style="position: relative; left: 100px;">
+                <a class="nav-link" href="{% url 'depdelete' 1 %}"><b>CVB DELETE</b></a>
+              </li>
+              <ui class="nav-item" style="position: relative; left: 100px;">
+                <form class="nav-link" action="{% url 'logout' %}" method="POST">
+                  {% csrf_token %}
+                  <button class="logout" type="submit">Logout</button>
+                </form>
+              </ui>
+            </ul>
+          </div>
+        </div>
+      </nav>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+{% block content %}
+{% endblock %}

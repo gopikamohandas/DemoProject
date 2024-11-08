@@ -1,0 +1,23 @@
+{% extends 'bootstrap.html' %}
+
+{% block content %}
+<h2 style="padding: 10px; margin: 0 auto; width: fit-content;">Contact Us...</h2>
+<div class="row" style="background-color: lightblue; width: 50vw; padding: 20px; margin: 0 auto; border-radius: 10px;">
+    <div class="col-sm-6 offset-3">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" id="name1" name="Name">
+            </div>
+            <div class="form-group">
+                <label>Contact Number</label>
+                <input type="tel" class="form-control" id="phone1" name="Phone"><br>
+        </form>
+        <div class="form-group">
+            <button class="btn btn-primary">Submit</Button>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

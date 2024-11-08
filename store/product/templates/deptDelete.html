@@ -1,0 +1,9 @@
+{% extends 'bootstrap.html' %}
+    {% block content%}
+        <form action=" " method="post">
+            {% csrf_token %}
+        {{ form.p }}
+            <p>Do you want to delete for sure?</p>
+            <button>Save</button>
+        </form>
+    {% endblock %}

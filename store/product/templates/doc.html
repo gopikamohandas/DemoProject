@@ -1,0 +1,40 @@
+{% extends 'bootstrap.html' %}
+{% block content %}
+<style>
+   h2{
+      text-align: center;
+   }
+   .container{
+      background-color: lightblue;
+      width: 100%;
+      padding: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+   }
+   img{
+      height: 200px;
+      width: 300px;
+   }
+   div .card{
+      padding: 30px;
+      text-align: center;
+
+      
+   }
+
+</style>
+<h2>Our Doctors</h2>
+   <div class="container">
+      {% for i in docs %}
+         <div class="card" style="width: 300px">
+            <img src="{{ i.doc_img.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ i.doc_name }}</h5>
+            <p class="card-text">{{ i.doc_sep }}</p>
+            <p class="card-text">{{ i.dep_name }}</p>
+            </div>
+         </div>
+      {% endfor %}
+   </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'bootstrap.html' %}
+{% block content%}
+     {% load crispy_forms_tags %}
+     <h2 style="padding: 20px; width: fit-content; margin: 0 auto;">Book Your Appointments...</h2>
+    <div style="width: 60%; margin: 0 auto; background-color: lightblue; padding: 20px; border-radius: 10px;">
+
+        <form action="" method="POST">
+            {% csrf_token %}
+
+                <!-- {{ form|crispy }}   variable from views -->
+
+            <br>
+
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}

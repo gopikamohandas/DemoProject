@@ -1,0 +1,10 @@
+{% extends 'bootstrap.html' %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {{ form.as_table }}
+        <button>Save</button>
+    </form>
+
+{% endblock %}
